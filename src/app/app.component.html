@@ -6,29 +6,29 @@
   <input type="hidden" #selection>
 
   <div class="card-container">
-    <div class="card card-small" (click)="selection.value = 'chouyan'" tabindex="0">
+    <div class="card card-small" (click)="smoke()" tabindex="0">
       <span>抽烟</span>
     </div>
 
-    <div class="card card-small" (click)="selection.value = 'hejiu'" tabindex="0">
+    <div class="card card-small" (click)="drink()" tabindex="0">
       <span>喝酒</span>
     </div>
 
-    <div class="card card-small" (click)="selection.value = 'tangtou'" tabindex="0">
+    <div class="card card-small" (click)="drawHair()" tabindex="0">
       <span>烫头</span>
     </div>
 
-    <div class="card card-small" (click)="selection.value = 'shuijiao'" tabindex="0">
+    <div class="card card-small" (click)="sleep()" tabindex="0">
       <span>睡觉</span>
     </div>
   </div>
 
   <!-- Terminal -->
-  <div class="terminal" [ngSwitch]="selection.value">
-      <pre *ngSwitchDefault>抽一支烟</pre>
-      <pre *ngSwitchCase="'hejiu'">喝一杯酒</pre>
-      <pre *ngSwitchCase="'tangtou'">烫一个头</pre>
-      <pre *ngSwitchCase="'shuijiao'">睡一会叫</pre>
+  <div class="terminal">
+      <pre *ngIf="selected == 1">抽一支烟--您已经抽了{{smokeCount}}支烟啦！不能再抽啦！</pre>
+      <pre *ngIf="selected == 2">喝一杯酒--您已经喝了{{drinkCount}}瓶酒啦！不能再喝啦！</pre>
+      <pre *ngIf="selected == 3">烫一回头--您已经烫了{{drawHairCount}}次头啦！不能再烫啦！</pre>
+      <pre *ngIf="selected == 4">睡一会叫--您已经睡了{{sleepCount}}回觉啦！不能再睡啦！</pre>
   </div>
 
 </div>
