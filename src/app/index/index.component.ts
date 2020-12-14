@@ -6,15 +6,40 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
-  title = 'Koinet';
+  private smokeCount: number;
+  private drinkCount: number;
+  private drawHairCount: number;
+  private doHighMathCount: number;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+    this.smokeCount = 0;
+    this.drinkCount = 0;
+    this.drawHairCount = 0;
+    this.doHighMathCount = 0;
   }
 
-  test(): void {
-    console.log(1);
+  ngOnInit(): void {
+
+  }
+
+  smoke(): void {
+    console.log('smoke');
+    this.smokeCount++;
+  }
+
+  drink(): void {
+    console.log('drink');
+    this.drinkCount++;
+  }
+
+  drawHair(): void {
+    console.log('drawHair');
+    this.drawHairCount++;
+  }
+
+  doHighMath(): void {
+    console.log('doHighMath');
+    this.doHighMathCount++;
   }
 
 }

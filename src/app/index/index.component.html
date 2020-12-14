@@ -1,34 +1,35 @@
 <div class="content" role="main">
   <!-- 开挂的路本文 -->
-  <h2>我卢本伟没有开挂</h2>
+  <h2>卢本伟广场</h2>
   <p>您还想要做什么？</p>
 
   <input type="hidden" #selection>
 
   <div class="card-container">
-    <div class="card card-small" (click)="selection.value = 'component'" (click)="test" tabindex="0">
+    <div class="card card-small" (click)="selection.value = 'smoke'" (click)="smoke()" tabindex="0">
       <span>抽烟</span>
     </div>
 
-    <div class="card card-small" (click)="selection.value = 'material'" tabindex="0">
+    <div class="card card-small" (click)="selection.value = 'drink'" (click)="drink()" tabindex="0">
       <span>喝酒</span>
     </div>
 
-    <div class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
+    <div class="card card-small" (click)="selection.value = 'drawHair'" (click)="drawHair()" tabindex="0">
       <span>烫头</span>
     </div>
 
-    <div class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
+    <div class="card card-small" (click)="selection.value = 'doHighMath'" (click)="doHighMath()" tabindex="0">
       <span>复习高数</span>
     </div>
   </div>
 
   <!-- Terminal -->
   <div class="terminal" [ngSwitch]="selection.value">
-      <pre *ngSwitchDefault>ng generate component xyz</pre>
-      <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
-      <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
-      <pre *ngSwitchCase="'dependency'">ng add _____</pre>
+      <pre *ngSwitchDefault>我卢本伟没有开挂</pre>
+      <pre *ngSwitchCase="'smoke'">抽一盒烟</pre>
+      <pre *ngSwitchCase="'drink'">喝一杯酒</pre>
+      <pre *ngSwitchCase="'drawHair'">烫一个头</pre>
+      <pre *ngSwitchCase="'doHighMath'">写一张高数</pre>
   </div>
 
   <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
