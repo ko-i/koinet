@@ -202,61 +202,52 @@ class IndexComponent {
         this.drinkMessage = '。';
         this.drawHairMessage = '。';
         this.doHighMathMessage = '。';
+        this.timeToLungCancer = 0.0;
+        this.timeToLiverCancer = 0.0;
+        this.timeToHairCancer = 0.0;
+        this.timeToDeath = 0.0;
     }
     ngOnInit() {
     }
     smoke() {
         console.log('smoke');
         this.smokeCount++;
-        this.smokeMessage = this.getSmokeMessage(this.smokeCount);
+        this.setSmokeMessage(this.smokeCount);
     }
     drink() {
         console.log('drink');
         this.drinkCount++;
+        this.setDrinkMessage(this.drinkCount);
     }
     drawHair() {
         console.log('drawHair');
         this.drawHairCount++;
+        this.setDrawHairMessage(this.drawHairCount);
     }
     doHighMath() {
         console.log('doHighMath');
         this.doHighMathCount++;
+        this.setDoHighMathMessage(this.doHighMathCount);
     }
-    getSmokeMessage(smokeCount) {
-        if (smokeCount >= 1024) {
-            return '。您死到临头了！';
-        }
-        if (smokeCount >= 512) {
-            return '。加油！您快要死啦！！！！！！！！';
-        }
-        if (smokeCount >= 256) {
-            return '。加油！您快要死啦！！！！！！！';
-        }
-        if (smokeCount >= 128) {
-            return '。加油！您快要死啦！！！！！！';
-        }
-        if (smokeCount >= 64) {
-            return '。加油！您快要死啦！！！！！';
-        }
-        if (smokeCount >= 32) {
-            return '。加油！您快要死啦！！！！';
-        }
-        if (smokeCount >= 16) {
-            return '。加油！您快要死啦！！！';
-        }
-        if (smokeCount >= 8) {
-            return '。加油！您快要死啦！！';
-        }
-        if (smokeCount >= 4) {
-            return '。加油！您快要死啦！';
-        }
-        if (smokeCount >= 2) {
-            return '。感觉不错！';
-        }
-        if (smokeCount >= 1) {
-            return '。';
-        }
-        return '。';
+    setSmokeMessage(smokeCount) {
+        const speed = 1 / smokeCount;
+        this.timeToLungCancer += speed * 0.1;
+        this.smokeMessage = '肺癌进度(' + this.timeToLungCancer.toFixed(4) + '/1.0000)';
+    }
+    setDrinkMessage(drinkCount) {
+        const speed = 1 / drinkCount;
+        this.timeToLiverCancer += speed * 0.1;
+        this.drinkMessage = '肝癌进度(' + this.timeToLiverCancer.toFixed(4) + '/1.0000)';
+    }
+    setDrawHairMessage(drawHairCount) {
+        const speed = 1 / drawHairCount;
+        this.timeToHairCancer += speed * 0.1;
+        this.drawHairMessage = '头皮发麻进度(' + this.timeToHairCancer.toFixed(4) + '/1.0000)';
+    }
+    setDoHighMathMessage(doHighMathCount) {
+        const speed = 1 / doHighMathCount;
+        this.timeToDeath += speed * 0.1;
+        this.doHighMathMessage = '。您离死不远了！死亡进度(' + this.timeToDeath.toFixed(4) + '/1.0000)';
     }
 }
 IndexComponent.ɵfac = function IndexComponent_Factory(t) { return new (t || IndexComponent)(); };

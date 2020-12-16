@@ -17,6 +17,11 @@ export class IndexComponent implements OnInit {
   drawHairMessage: string;
   doHighMathMessage: string;
 
+  timeToLungCancer: number;
+  timeToLiverCancer: number;
+  timeToHairCancer: number;
+  timeToDeath: number;
+
   constructor() {
     this.smokeCount = 0;
     this.drinkCount = 0;
@@ -27,6 +32,11 @@ export class IndexComponent implements OnInit {
     this.drinkMessage = '。';
     this.drawHairMessage = '。';
     this.doHighMathMessage = '。';
+
+    this.timeToLungCancer = 0.0;
+    this.timeToLiverCancer = 0.0;
+    this.timeToHairCancer = 0.0;
+    this.timeToDeath = 0.0;
   }
 
   ngOnInit(): void {
@@ -37,82 +47,56 @@ export class IndexComponent implements OnInit {
     console.log('smoke');
     this.smokeCount++;
 
-    this.smokeMessage = this.getSmokeMessage(this.smokeCount);
+    this.setSmokeMessage(this.smokeCount);
   }
 
   drink(): void {
     console.log('drink');
     this.drinkCount++;
+
+    this.setDrinkMessage(this.drinkCount);
   }
 
   drawHair(): void {
     console.log('drawHair');
     this.drawHairCount++;
+
+    this.setDrawHairMessage(this.drawHairCount);
   }
 
   doHighMath(): void {
     console.log('doHighMath');
     this.doHighMathCount++;
+
+    this.setDoHighMathMessage(this.doHighMathCount);
   }
 
-  getSmokeMessage(smokeCount: number): string {
-    if (smokeCount >= 1024)
-    {
-      return '。您死到临头了！';
-    }
+  setSmokeMessage(smokeCount: number): void {
+    const speed = 1 / smokeCount;
+    this.timeToLungCancer += speed * 0.1;
 
-    if (smokeCount >= 512)
-    {
-      return '。加油！您快要死啦！！！！！！！！';
-    }
+    this.smokeMessage = '肺癌进度(' + this.timeToLungCancer.toFixed(4) + '/1.0000)';
+  }
 
-    if (smokeCount >= 256)
-    {
-      return '。加油！您快要死啦！！！！！！！';
-    }
+  setDrinkMessage(drinkCount: number): void {
+    const speed = 1 / drinkCount;
+    this.timeToLiverCancer += speed * 0.1;
 
-    if (smokeCount >= 128)
-    {
-      return '。加油！您快要死啦！！！！！！';
-    }
+    this.drinkMessage = '肝癌进度(' + this.timeToLiverCancer.toFixed(4) + '/1.0000)';
+  }
 
-    if (smokeCount >= 64)
-    {
-      return '。加油！您快要死啦！！！！！';
-    }
+  setDrawHairMessage(drawHairCount: number): void {
+    const speed = 1 / drawHairCount;
+    this.timeToHairCancer += speed * 0.1;
 
-    if (smokeCount >= 32)
-    {
-      return '。加油！您快要死啦！！！！';
-    }
+    this.drawHairMessage = '头皮发麻进度(' + this.timeToHairCancer.toFixed(4) + '/1.0000)';
+  }
 
-    if (smokeCount >= 16)
-    {
-      return '。加油！您快要死啦！！！';
-    }
+  setDoHighMathMessage(doHighMathCount: number): void {
+    const speed = 1 / doHighMathCount;
+    this.timeToDeath += speed * 0.1;
 
-    if (smokeCount >= 8)
-    {
-      return '。加油！您快要死啦！！';
-    }
-
-    if (smokeCount >= 4)
-    {
-      return '。加油！您快要死啦！';
-    }
-
-    if (smokeCount >= 2)
-    {
-      return '。感觉不错！';
-    }
-
-    if (smokeCount >= 1)
-    {
-      return '。';
-    }
-
-    return '。';
-
+    this.doHighMathMessage = '。您离死不远了！死亡进度(' + this.timeToDeath.toFixed(4) + '/1.0000)';
   }
 
 }
