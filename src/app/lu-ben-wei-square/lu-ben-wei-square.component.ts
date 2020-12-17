@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lu-ben-wei-square',
@@ -9,33 +10,29 @@ export class LuBenWeiSquareComponent implements OnInit {
 
   smokeCount: number;
   drinkCount: number;
-  drawHairCount: number;
   doHighMathCount: number;
 
   smokeMessage: string;
   drinkMessage: string;
-  drawHairMessage: string;
   doHighMathMessage: string;
 
   timeToLungCancer: number;
   timeToLiverCancer: number;
-  timeToHairCancer: number;
   timeToDeath: number;
 
-  constructor() {
+  constructor(
+    private router: Router,
+  ) {
     this.smokeCount = 0;
     this.drinkCount = 0;
-    this.drawHairCount = 0;
     this.doHighMathCount = 0;
 
     this.smokeMessage = '。';
     this.drinkMessage = '。';
-    this.drawHairMessage = '。';
     this.doHighMathMessage = '。';
 
     this.timeToLungCancer = 0.0;
     this.timeToLiverCancer = 0.0;
-    this.timeToHairCancer = 0.0;
     this.timeToDeath = 0.0;
   }
 
@@ -55,13 +52,6 @@ export class LuBenWeiSquareComponent implements OnInit {
     this.drinkCount++;
 
     this.setDrinkMessage(this.drinkCount);
-  }
-
-  drawHair(): void {
-    console.log('drawHair');
-    this.drawHairCount++;
-
-    this.setDrawHairMessage(this.drawHairCount);
   }
 
   doHighMath(): void {
@@ -85,18 +75,15 @@ export class LuBenWeiSquareComponent implements OnInit {
     this.drinkMessage = '。\n您得肝癌的进度: ' + (this.timeToLiverCancer * 100).toFixed(4) + '%';
   }
 
-  setDrawHairMessage(drawHairCount: number): void {
-    const speed = 1 / drawHairCount;
-    this.timeToHairCancer += speed * 0.1;
-
-    this.drawHairMessage = '。\n您头皮发麻的进度: ' + (this.timeToHairCancer * 100).toFixed(4) + '%';
-  }
-
   setDoHighMathMessage(doHighMathCount: number): void {
     const speed = 1 / doHighMathCount;
     this.timeToDeath += speed * 0.1;
 
     this.doHighMathMessage = '。\n您离死不远了！您的死亡进度: ' + (this.timeToDeath * 100).toFixed(4) + '%';
+  }
+
+  navigateToIndex(): void {
+    this.router.navigate(['/index']);
   }
 
 }

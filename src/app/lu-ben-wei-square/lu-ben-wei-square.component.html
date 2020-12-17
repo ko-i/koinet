@@ -10,16 +10,16 @@
         <span>抽烟</span>
       </div>
   
-      <div class="card card-small" (click)="selection.value = 'drink'" (click)="drink()" tabindex="0">
+      <div class="card card-small" (click)="selection.value = 'drink'" (click)="drink()" tabindex="1">
         <span>喝酒</span>
       </div>
   
-      <div class="card card-small" (click)="selection.value = 'drawHair'" (click)="drawHair()" tabindex="0">
-        <span>烫头</span>
-      </div>
-  
-      <div class="card card-small" (click)="selection.value = 'doHighMath'" (click)="doHighMath()" tabindex="0">
+      <div class="card card-small" (click)="selection.value = 'doHighMath'" (click)="doHighMath()" tabindex="2">
         <span>复习高数</span>
+      </div>
+
+      <div class="card card-small" (click)="navigateToIndex()" tabindex="3">
+        <span>回天津带学</span>
       </div>
     </div>
   
@@ -28,7 +28,6 @@
         <pre *ngSwitchDefault>我卢本伟没有开挂</pre>
         <pre *ngSwitchCase="'smoke'">抽一盒烟：这是您抽的第{{smokeCount}}包烟{{smokeMessage}}</pre>
         <pre *ngSwitchCase="'drink'">喝一杯酒：这是您喝的第{{drinkCount}}杯酒{{drinkMessage}}</pre>
-        <pre *ngSwitchCase="'drawHair'">烫一个头：这是您烫的第{{drawHairCount}}次头{{drawHairMessage}}</pre>
         <pre *ngSwitchCase="'doHighMath'">写一张高数：这是您做的第{{doHighMathCount}}张高数卷子{{doHighMathMessage}}</pre>
     </div>
   
