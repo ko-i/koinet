@@ -20,6 +20,10 @@ export class IndexComponent implements OnInit {
 
   }
 
+  navigateToTju(): void {
+    this.router.navigate(['/tju']);
+  }
+
   navigateToLuBenWeiSquare(): void {
     this.router.navigate(['/lu-ben-wei-square']);
   }

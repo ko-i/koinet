@@ -1,29 +1,24 @@
 <div class="content" role="main">
-    <!-- 开挂的路本文 -->
-    <h2>卢本伟广场</h2>
+    <!-- 天津带学 -->
+    <h2>天津带学</h2>
     <p>您还想要做什么？</p>
   
     <input type="hidden" #selection>
   
     <div class="card-container">
-      <div class="card card-small" (click)="selection.value = 'smoke'" (click)="smoke()" tabindex="0">
-        <span>抽烟</span>
-      </div>
-  
-      <div class="card card-small" (click)="selection.value = 'drink'" (click)="drink()" tabindex="1">
-        <span>喝酒</span>
+      <div class="card card-small" (click)="selection.value = 'doHighMath'" (click)="doHighMath()" tabindex="0">
+        <span>复习高数</span>
       </div>
 
-      <div class="card card-small" (click)="navigateToIndex()" tabindex="3">
+      <div class="card card-small" (click)="navigateToIndex()" tabindex="1">
         <span>回不夜城</span>
       </div>
     </div>
   
     <!-- Terminal -->
     <div class="terminal" [ngSwitch]="selection.value">
-        <pre *ngSwitchDefault>我卢本伟没有开挂</pre>
-        <pre *ngSwitchCase="'smoke'">抽一盒烟：这是您抽的第{{smokeCount}}包烟{{smokeMessage}}</pre>
-        <pre *ngSwitchCase="'drink'">喝一杯酒：这是您喝的第{{drinkCount}}杯酒{{drinkMessage}}</pre>
+        <pre *ngSwitchDefault>今天的天大很核平</pre>
+        <pre *ngSwitchCase="'doHighMath'">写一张高数：这是您做的第{{doHighMathCount}}张高数卷子{{doHighMathMessage}}</pre>
     </div>
   
     <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
