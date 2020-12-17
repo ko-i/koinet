@@ -7,25 +7,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./tju.component.scss']
 })
 export class TjuComponent implements OnInit {
+  hour = '4';
 
-  doHighMathCount: number;
-
-  doHighMathMessage: string;
-
-  timeToDeath: number;
+  doHighMathCount = 0;
+  doHighMathMessage = '。';
+  timeToDeath = 0.0;
 
   constructor(
     private router: Router,
-  ) {
-    this.doHighMathCount = 0;
-
-    this.doHighMathMessage = '。';
-
-    this.timeToDeath = 0.0;
-  }
+  ) {}
 
   ngOnInit(): void {
-
+    const date: Date = new Date();
+    this.hour = date.getHours().toString();
   }
 
   doHighMath(): void {
