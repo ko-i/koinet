@@ -1,17 +1,22 @@
 <div class="content" role="main">
     <!-- 开挂的路本文 -->
     <h2>卢本伟广场</h2>
-    <p>您还想要做什么？</p>
+    <p>我卢本伟没有开挂</p>
   
     <input type="hidden" #selection>
   
     <div class="card-container">
-      <div class="card card-small" (click)="selection.value = 'smoke'" (click)="smoke()" tabindex="0">
-        <span>抽烟</span>
+
+      <div class="card card-small" (click)="selection.value = 'pubg'" (click)="pubg()" tabindex="0">
+        <span>玩绝地求生</span>
+      </div>
+
+      <div class="card card-small" (click)="selection.value = 'douDiZhu'" (click)="douDiZhu()" tabindex="1">
+        <span>玩斗地主</span>
       </div>
   
-      <div class="card card-small" (click)="selection.value = 'drink'" (click)="drink()" tabindex="1">
-        <span>喝酒</span>
+      <div class="card card-small" (click)="selection.value = 'gettingOverIt'" (click)="gettingOverIt()" tabindex="2">
+        <span>和苯尼特福迪一起攻克难关</span>
       </div>
 
       <div class="card card-small" (click)="navigateToIndex()" tabindex="3">
@@ -21,9 +26,10 @@
   
     <!-- Terminal -->
     <div class="terminal" [ngSwitch]="selection.value">
-        <pre *ngSwitchDefault>我卢本伟没有开挂</pre>
-        <pre *ngSwitchCase="'smoke'">抽一盒烟：这是您抽的第{{smokeCount}}包烟{{smokeMessage}}</pre>
-        <pre *ngSwitchCase="'drink'">喝一杯酒：这是您喝的第{{drinkCount}}杯酒{{drinkMessage}}</pre>
+        <pre *ngSwitchDefault>您可以在这里开挂，喝卡布奇诺，以及吃橘子</pre>
+        <pre *ngSwitchCase="'douDiZhu'">玩一把斗地主：这是您第{{douDiZhuCount}}次做慈善。{{douDiZhuMessage}}</pre>
+        <pre *ngSwitchCase="'pubg'">玩一把绝地求生：这是您第{{pubgCount}}次29杀！{{pubgMessage}}</pre>
+        <pre *ngSwitchCase="'gettingOverIt'">玩一把绝地求升：这是您第{{gettingOverItCount}}次被橘子搞。{{gettingOverItMessage}}</pre>
     </div>
   
     <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">

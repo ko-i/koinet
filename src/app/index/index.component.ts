@@ -27,4 +27,8 @@ export class IndexComponent implements OnInit {
     this.router.navigate(['/lu-ben-wei-square']);
   }
 
+  navigateToBar(): void {
+    this.router.navigate(['/bar']);
+  }
+
 }

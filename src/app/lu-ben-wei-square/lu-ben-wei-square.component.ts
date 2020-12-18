@@ -8,58 +8,58 @@ import { Router } from '@angular/router';
 })
 export class LuBenWeiSquareComponent implements OnInit {
 
-  smokeCount: number;
-  drinkCount: number;
+  pubgCount: number;
+  douDiZhuCount: number;
+  gettingOverItCount: number;
 
-  smokeMessage: string;
-  drinkMessage: string;
-
-  timeToLungCancer: number;
-  timeToLiverCancer: number;
+  pubgMessage: string;
+  douDiZhuMessage: string;
+  gettingOverItMessage: string;
 
   constructor(
     private router: Router,
   ) {
-    this.smokeCount = 0;
-    this.drinkCount = 0;
+    this.pubgCount = 0;
+    this.douDiZhuCount = 0;
+    this.gettingOverItCount = 0;
 
-    this.smokeMessage = '。';
-    this.drinkMessage = '。';
+    this.pubgMessage = '';
+    this.douDiZhuMessage = '';
+    this.gettingOverItMessage = '';
 
-    this.timeToLungCancer = 0.0;
-    this.timeToLiverCancer = 0.0;
   }
 
   ngOnInit(): void {
 
   }
 
-  smoke(): void {
-    console.log('smoke');
-    this.smokeCount++;
+  pubg(): void {
+    this.pubgCount++;
 
-    this.setSmokeMessage(this.smokeCount);
+    this.setPubgMessage(this.pubgCount);
   }
 
-  drink(): void {
-    console.log('drink');
-    this.drinkCount++;
+  douDiZhu(): void {
+    this.douDiZhuCount++;
 
-    this.setDrinkMessage(this.drinkCount);
+    this.setDouDiZhuMessage(this.pubgCount);
   }
 
-  setSmokeMessage(smokeCount: number): void {
-    const speed = 1 / smokeCount;
-    this.timeToLungCancer += speed * 0.1;
+  gettingOverIt(): void {
+    this.gettingOverItCount++;
 
-    this.smokeMessage = '。\n您得肺癌的进度: ' + (this.timeToLungCancer * 100).toFixed(4) + '%';
+    this.setgettingOverItMessage(this.gettingOverItCount);
   }
 
-  setDrinkMessage(drinkCount: number): void {
-    const speed = 1 / drinkCount;
-    this.timeToLiverCancer += speed * 0.1;
+  setPubgMessage(pubgCount: number): void {
+    this.pubgMessage = '我卢本伟没有开挂。';
+  }
+  setDouDiZhuMessage(douDiZhuCount: number): void {
+    this.douDiZhuMessage = '给阿姨倒一杯卡布奇诺';
+  }
 
-    this.drinkMessage = '。\n您得肝癌的进度: ' + (this.timeToLiverCancer * 100).toFixed(4) + '%';
+  setgettingOverItMessage(gettingOverItCount: number): void {
+    this.gettingOverItMessage = '玩游戏还要笑着玩。';
   }
 
   navigateToIndex(): void {

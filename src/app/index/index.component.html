@@ -1,7 +1,7 @@
 <div class="content" role="main">
   <!-- 开挂的路本文 -->
   <h2>欢迎回家，现在是早上{{hour}}点</h2>
-  <p>您还想要做什么？</p>
+  <p>您家里还什么还都还没有</p>
 
   <div class="card-container">
     <div class="card card-small" (click)="navigateToTju()" tabindex="0">
@@ -10,6 +10,10 @@
 
     <div class="card card-small" (click)="navigateToLuBenWeiSquare()" tabindex="1">
       <span>去卢本伟广场</span>
+    </div>
+
+    <div class="card card-small" (click)="navigateToBar()" tabindex="2">
+      <span>去酒吧</span>
     </div>
   </div>
 </div>

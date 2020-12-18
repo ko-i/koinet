@@ -11,7 +11,7 @@ export class TjuComponent implements OnInit {
 
   doHighMathCount = 0;
   doHighMathMessage = '。';
-  timeToDeath = 0.0;
+  hignMathMarkWillGet = 0.0;
 
   constructor(
     private router: Router,
@@ -23,7 +23,6 @@ export class TjuComponent implements OnInit {
   }
 
   doHighMath(): void {
-    console.log('doHighMath');
     this.doHighMathCount++;
 
     this.setDoHighMathMessage(this.doHighMathCount);
@@ -31,9 +30,9 @@ export class TjuComponent implements OnInit {
 
   setDoHighMathMessage(doHighMathCount: number): void {
     const speed = 1 / doHighMathCount;
-    this.timeToDeath += speed * 0.1;
+    this.hignMathMarkWillGet += speed * 0.1;
 
-    this.doHighMathMessage = '。\n您离死不远了！您的死亡进度: ' + (this.timeToDeath * 100).toFixed(4) + '%';
+    this.doHighMathMessage = '预计期末您能考: ' + (this.hignMathMarkWillGet * 60).toFixed(2) + '分，及格还需努力。';
   }
 
   navigateToIndex(): void {
