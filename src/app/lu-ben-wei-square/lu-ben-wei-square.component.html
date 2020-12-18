@@ -27,7 +27,7 @@
     <!-- Terminal -->
     <div class="terminal" [ngSwitch]="selection.value">
         <pre *ngSwitchDefault>您可以在这里开挂，喝卡布奇诺，以及吃橘子</pre>
-        <pre *ngSwitchCase="'douDiZhu'">玩一把斗地主：这是您第{{douDiZhuCount}}次做慈善。{{douDiZhuMessage}}</pre>
+        <pre *ngSwitchCase="'douDiZhu'">玩一把斗地主：这是您第{{douDiZhuCount}}次做慈善。<br>{{douDiZhuMessage}}</pre>
         <pre *ngSwitchCase="'pubg'">玩一把绝地求生：这是您第{{pubgCount}}次29杀！{{pubgMessage}}</pre>
         <pre *ngSwitchCase="'gettingOverIt'">玩一把绝地求升：这是您第{{gettingOverItCount}}次被橘子搞。{{gettingOverItMessage}}</pre>
     </div>
