@@ -31,7 +31,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function TjuComponent_pre_15_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "pre");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "\u4ECA\u5929\u7684\u5929\u5927\u5F88\u6838\u5E73");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "\u4ECA\u5929\u7684\u5929\u5E26\u5F88\u6838\u5E73");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function TjuComponent_pre_16_Template(rf, ctx) { if (rf & 1) {
