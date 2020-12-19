@@ -9,10 +9,6 @@ import { Router } from '@angular/router';
 export class TjuComponent implements OnInit {
   hour = '4';
 
-  doHighMathCount = 0;
-  doHighMathMessage = '。';
-  hignMathMarkWillGet = 0.0;
-
   constructor(
     private router: Router,
   ) {}
@@ -22,21 +18,12 @@ export class TjuComponent implements OnInit {
     this.hour = date.getHours().toString();
   }
 
-  doHighMath(): void {
-    this.doHighMathCount++;
-
-    this.setDoHighMathMessage(this.doHighMathCount);
-  }
-
-  setDoHighMathMessage(doHighMathCount: number): void {
-    const speed = 1 / doHighMathCount;
-    this.hignMathMarkWillGet += speed * 0.1;
-
-    this.doHighMathMessage = '预计期末您能考: ' + (this.hignMathMarkWillGet * 60).toFixed(2) + '分，及格还需努力。';
-  }
-
   navigateToIndex(): void {
     this.router.navigate(['/index']);
+  }
+
+  navigateToDoHighMath(): void {
+    this.router.navigate(['tju/do-high-math']);
   }
 
 }

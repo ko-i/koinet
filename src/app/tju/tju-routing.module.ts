@@ -14,7 +14,7 @@ const tjuRoutes: Routes = [
                 component: TjuIndexComponent
             },
             {
-                path: 'do-high-math',
+                path: 'tju/do-high-math',
                 component: DoHighMathComponent,
             }
         ]
