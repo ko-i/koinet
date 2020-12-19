@@ -15,17 +15,18 @@ const routes: Routes = [
     component: IndexComponent,
   },
   {
+    path: 'tju',
+    loadChildren: () => import('./tju/tju.module').then(m => m.TjuModule),
+    data: { preload: true }
+  },
+  {
     path: 'lu-ben-wei-square',
     component: LuBenWeiSquareComponent,
   },
   {
-    path: 'tju',
-    component: TjuComponent,
-  },
-  {
     path: 'bar',
     component: BarComponent,
-  }
+  },
 ];
 
 @NgModule({
