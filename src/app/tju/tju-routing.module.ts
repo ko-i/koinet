@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DoHighMathComponent } from './do-high-math/do-high-math.component';
+import { HighMathExamComponent } from './high-math-exam/high-math-exam.component';
+
 import { TjuIndexComponent } from './tju-index/tju-index.component';
 import { TjuComponent } from './tju.component';
 
@@ -14,8 +15,8 @@ const tjuRoutes: Routes = [
                 component: TjuIndexComponent
             },
             {
-                path: 'tju/do-high-math',
-                component: DoHighMathComponent,
+                path: 'tju/high-math-exam',
+                component: HighMathExamComponent,
             }
         ]
     },

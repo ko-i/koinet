@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-tju',
   templateUrl: './tju.component.html',
-  styleUrls: ['./tju.component.scss']
+  styleUrls: ['./tju.component.css']
 })
 export class TjuComponent implements OnInit {
   hour = '4';
@@ -23,7 +23,7 @@ export class TjuComponent implements OnInit {
   }
 
   navigateToDoHighMath(): void {
-    this.router.navigate(['tju/do-high-math']);
+    this.router.navigate(['tju/high-math-exam']);
   }
 
 }

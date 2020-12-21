@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BarComponent } from './bar/bar.component';
 import { IndexComponent } from './index/index.component';
-import { LuBenWeiSquareComponent } from './lu-ben-wei-square/lu-ben-wei-square.component';
-import { TjuComponent } from './tju/tju.component';
 
 const routes: Routes = [
   {
@@ -20,12 +17,9 @@ const routes: Routes = [
     data: { preload: true }
   },
   {
-    path: 'lu-ben-wei-square',
-    component: LuBenWeiSquareComponent,
-  },
-  {
-    path: 'bar',
-    component: BarComponent,
+    path: 'lbw-square',
+    loadChildren: () => import('./lbw-square/lbw-square.module').then(m => m.LbwSquareModule),
+    data: { preload: true }
   },
 ];
 
