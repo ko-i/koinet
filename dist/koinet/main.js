@@ -23,6 +23,8 @@ module.exports = __webpack_require__(/*! /Users/akson/repo/koinet/src/main.ts */
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HighMathExamComponent", function() { return HighMathExamComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ng-zorro-antd/divider */ "5vDB");
+
 
 
 class HighMathExamComponent {
@@ -31,7 +33,15 @@ class HighMathExamComponent {
     }
 }
 HighMathExamComponent.ɵfac = function HighMathExamComponent_Factory(t) { return new (t || HighMathExamComponent)(); };
-HighMathExamComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HighMathExamComponent, selectors: [["app-high-math-exam"]], decls: 0, vars: 0, template: function HighMathExamComponent_Template(rf, ctx) { }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJoaWdoLW1hdGgtZXhhbS5jb21wb25lbnQuY3NzIn0= */"] });
+HighMathExamComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HighMathExamComponent, selectors: [["app-high-math-exam"]], decls: 5, vars: 0, consts: [["nzText", "111", "nzOrientation", "left"], ["nzText", "1111", "nzOrientation", "left"]], template: function HighMathExamComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "nz-divider", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "\u5730\u4E0A\u54A6\u4E2A\uD83D\uDC35\uFF0C\uD83C\uDF32\u4E0A\u9F50\u4E2A\uD83D\uDC35\uFF0C\u4E00\u5171\u51E0\u4E2A\uD83D\uDC35\uFF1F");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "nz-divider", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, directives: [ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_1__["NzDividerComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJoaWdoLW1hdGgtZXhhbS5jb21wb25lbnQuY3NzIn0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HighMathExamComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -138,6 +148,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tju_index_tju_index_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tju-index/tju-index.component */ "FBvY");
 /* harmony import */ var _high_math_exam_high_math_exam_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./high-math-exam/high-math-exam.component */ "1U1D");
 /* harmony import */ var _tju_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tju-routing.module */ "xaLR");
+/* harmony import */ var ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ng-zorro-antd/card */ "JA5x");
+/* harmony import */ var ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-zorro-antd/divider */ "5vDB");
+
+
 
 
 
@@ -151,9 +165,13 @@ TjuModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule
 TjuModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function TjuModule_Factory(t) { return new (t || TjuModule)(); }, imports: [[
             _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
             _tju_routing_module__WEBPACK_IMPORTED_MODULE_5__["TjuRoutingModule"],
+            ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_6__["NzCardModule"],
+            ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_7__["NzDividerModule"],
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](TjuModule, { declarations: [_tju_component__WEBPACK_IMPORTED_MODULE_2__["TjuComponent"], _tju_index_tju_index_component__WEBPACK_IMPORTED_MODULE_3__["TjuIndexComponent"], _high_math_exam_high_math_exam_component__WEBPACK_IMPORTED_MODULE_4__["HighMathExamComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-        _tju_routing_module__WEBPACK_IMPORTED_MODULE_5__["TjuRoutingModule"]] }); })();
+        _tju_routing_module__WEBPACK_IMPORTED_MODULE_5__["TjuRoutingModule"],
+        ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_6__["NzCardModule"],
+        ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_7__["NzDividerModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TjuModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
@@ -161,6 +179,8 @@ TjuModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector
                 imports: [
                     _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                     _tju_routing_module__WEBPACK_IMPORTED_MODULE_5__["TjuRoutingModule"],
+                    ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_6__["NzCardModule"],
+                    ng_zorro_antd_divider__WEBPACK_IMPORTED_MODULE_7__["NzDividerModule"],
                 ]
             }]
     }], null, null); })();

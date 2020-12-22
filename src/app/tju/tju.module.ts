@@ -6,6 +6,7 @@ import { HighMathExamComponent } from './high-math-exam/high-math-exam.component
 import { TjuRoutingModule } from './tju-routing.module';
 
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 @NgModule({
   declarations: [TjuComponent, TjuIndexComponent, HighMathExamComponent],
@@ -13,7 +14,8 @@ import { NzCardModule } from 'ng-zorro-antd/card';
     CommonModule,
     TjuRoutingModule,
 
-    NzCardModule
+    NzCardModule,
+    NzDividerModule,
   ]
 })
 export class TjuModule { }
